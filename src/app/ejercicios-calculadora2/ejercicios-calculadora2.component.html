@@ -1,0 +1,17 @@
+<div>
+    <input type="number" step="0.01" [(ngModel)]="monto" placeholder="Monto">
+    <select [(ngModel)]="monedaOrigen">
+      <option value="Libra">Libra</option>
+      <option value="Dólares">Dólares</option>
+      <option value="Euro">Euro</option>
+    </select>
+    <select [(ngModel)]="monedaDestino">
+      <option value="Libra">Libra</option>
+      <option value="Dólares">Dólares</option>
+      <option value="Euro">Euro</option>
+    </select>
+    <button (click)="convertir()">Convertir</button>
+    <div *ngIf="resultado !== null">
+      <p>Resultado: {{ resultado.toFixed(2) }}</p>
+    </div>
+  </div>
